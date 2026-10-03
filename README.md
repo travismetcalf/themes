@@ -20,7 +20,7 @@ scripts/           Installation helpers
 
 Hermes skins are in [`apps/hermes`](apps/hermes).
 
-Install both skins:
+Install all three skins:
 
 ```bash
 ./scripts/install-hermes.sh
@@ -31,6 +31,8 @@ Install into a specific Hermes profile or home:
 ```bash
 HERMES_HOME="$HOME/.hermes/profiles/example" ./scripts/install-hermes.sh
 ```
+
+The installer overwrites matching runtime skins. Compare and back up any local customizations before running it.
 
 Activate a skin:
 
@@ -47,6 +49,26 @@ Return to the default skin:
 ```bash
 hermes config set display.skin default
 ```
+
+## Deployment and Layout
+
+**Source Layout**
+
+- Laptop: `~/projects/themes`
+- travis-mac: `~/projects/themes` on the host, `/projects/themes` in Docker.
+- Local preservation: `.local-drafts/2026-10-03` is ignored local state (mac only), not tracked source.
+
+**Runtime State**
+
+- Default: `~/.hermes/skins`
+- Custom: `HERMES_HOME` profile paths.
+- Note: `~/deploy/themes` is not needed until automated runtime deployment is designed.
+
+**Workflow**
+
+- Future: `themes_fetch_main` / `themes_publish_branch` with `hermes/*` branch naming.
+- Current: Use laptop PR publication.
+- Security: Never use `gh auth login` or service-account tokens in the sandbox.
 
 ## Source of truth
 

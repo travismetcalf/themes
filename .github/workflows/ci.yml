@@ -1,0 +1,10 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  fleet-ci:
+    uses: travismetcalf/shared/.github/workflows/fleet-ci.yml@main
