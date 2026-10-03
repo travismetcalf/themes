@@ -1,0 +1,21 @@
+name: cream
+type: light
+source: https://travismetcalf.com/styleguide/
+colors:
+  paper: "#f4f1ea"
+  paper_raised: "#ffffff"
+  paper_inset: "#f4f1ea"
+  ink: "#1a1b2e"
+  ink_soft: "#4a4763"
+  ink_faint: "#635f7d"
+  rule: "#e0dbd0"
+  rule_strong: "#c9c3b6"
+  accent: "#a8182f"
+  accent_text: "#8e1428"
+  accent_bright: "#f3a3ab"
+  accent_tint: "#f7e9ec"
+  gold: "#806017"
+  selection: "#edd3d8"
+  good: "#106b0c"
+  bad: "#a8182f"
+  lavender: "#5f54a8"

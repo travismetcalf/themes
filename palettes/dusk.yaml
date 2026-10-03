@@ -1,0 +1,21 @@
+name: dusk
+type: dark
+source: https://travismetcalf.com/styleguide/
+colors:
+  paper: "#0f1020"
+  paper_raised: "#1a1b2e"
+  paper_inset: "#14152a"
+  ink: "#ece9f5"
+  ink_soft: "#b3aecb"
+  ink_faint: "#8d89aa"
+  rule: "#272844"
+  rule_strong: "#383a5e"
+  accent: "#c41e3a"
+  accent_text: "#e0485f"
+  accent_bright: "#f3a3ab"
+  accent_tint: "#241a26"
+  gold: "#d8b25a"
+  selection: "#3a2336"
+  good: "#55c96f"
+  bad: "#e65e73"
+  lavender: "#8579dc"
