@@ -1,0 +1,72 @@
+name: linear
+description: Precise near-black surfaces and indigo accents inspired by Linear
+source: https://linear.app/
+
+colors:
+  # Layered near-black surfaces
+  background: "#08090a"
+  banner_border: "#23252a"
+  ui_border: "#23252a"
+  session_border: "#37393a"
+  input_rule: "#37393a"
+  response_border: "#34343a"
+  selection_bg: "#30336b"
+
+  # High-clarity neutral ink
+  banner_title: "#f7f8f8"
+  banner_text: "#f7f8f8"
+  ui_text: "#f7f8f8"
+  ui_primary: "#f7f8f8"
+  ui_label: "#d0d6e0"
+  banner_dim: "#8a8f98"
+  hint: "#8a8f98"
+  placeholder: "#62666d"
+
+  # Linear indigo
+  ui_accent: "#7170ff"
+  banner_accent: "#7170ff"
+  banner_hero: "#828fff"
+  banner_logo: "#5e6ad2"
+  prompt: "#7170ff"
+  response_label: "#828fff"
+  session_label: "#8a8f98"
+  ui_tool: "#4ea7fc"
+  ui_thinking: "#8a8f98"
+  shell_dollar: "#7170ff"
+
+  # Semantic status
+  ui_ok: "#68cc58"
+  ui_warn: "#f0bf00"
+  ui_error: "#eb5757"
+
+  # Status bar and menus
+  status_bar_bg: "#0f1011"
+  status_bar_text: "#d0d6e0"
+  status_bar_strong: "#f7f8f8"
+  status_bar_dim: "#8a8f98"
+  status_bar_good: "#68cc58"
+  status_bar_warn: "#f0bf00"
+  status_bar_bad: "#eb5757"
+  status_bar_critical: "#eb5757"
+  completion_menu_bg: "#0f1011"
+  completion_menu_current_bg: "#18182f"
+  completion_menu_meta_bg: "#141516"
+  completion_menu_meta_current_bg: "#23244a"
+
+  # Code and diffs
+  syntax_string: "#68cc58"
+  syntax_number: "#4ea7fc"
+  syntax_keyword: "#828fff"
+  syntax_comment: "#62666d"
+  diff_added: "#68cc58"
+  diff_removed: "#eb5757"
+  diff_added_word: "#27a644"
+  diff_removed_word: "#eb5757"
+  voice_status_bg: "#18182f"
+
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: "❯"
+  help_header: "Hermes · Linear"
+
+tool_prefix: "┊"

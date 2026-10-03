@@ -14,6 +14,7 @@ scripts/           Installation helpers
 
 - **Dusk** — deep navy-purple surfaces, lavender-white ink, crimson emphasis, and editorial gold.
 - **Cream** — warm cream surfaces, deep navy ink, darkened crimson, and text-safe gold.
+- **Linear** — layered near-black surfaces, cool neutral ink, and focused indigo accents.
 
 ## Hermes
 
@@ -37,6 +38,8 @@ Activate a skin:
 hermes config set display.skin dusk
 # or
 hermes config set display.skin cream
+# or
+hermes config set display.skin linear
 ```
 
 Return to the default skin:

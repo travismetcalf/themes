@@ -1,0 +1,23 @@
+name: linear
+type: dark
+source: https://linear.app/
+colors:
+  paper: "#08090a"
+  paper_raised: "#0f1011"
+  paper_inset: "#141516"
+  ink: "#f7f8f8"
+  ink_soft: "#d0d6e0"
+  ink_faint: "#8a8f98"
+  ink_quiet: "#62666d"
+  rule: "#23252a"
+  rule_strong: "#37393a"
+  accent: "#5e6ad2"
+  accent_text: "#7170ff"
+  accent_hover: "#828fff"
+  accent_tint: "#18182f"
+  selection: "#30336b"
+  green: "#27a644"
+  green_bright: "#68cc58"
+  yellow: "#f0bf00"
+  red: "#eb5757"
+  blue: "#4ea7fc"
