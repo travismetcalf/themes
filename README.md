@@ -64,11 +64,18 @@ hermes config set display.skin default
 - Custom: `HERMES_HOME` profile paths.
 - Note: `~/deploy/themes` is not needed until automated runtime deployment is designed.
 
-**Workflow**
+**Publishing**
 
-- Future: `themes_fetch_main` / `themes_publish_branch` with `hermes/*` branch naming.
-- Current: Use laptop PR publication.
-- Security: Never use `gh auth login` or service-account tokens in the sandbox.
+- The host-side `themes_fetch_main` / `themes_publish_branch` tools use
+  `hermes/*` branch names. They scan and publish a branch and open a PR; they do
+  not merge it or install skins.
+- The trusted host uses a GitHub App shared with the Hermes publisher. Each
+  Themes publication requests an installation token narrowed to this
+  repository. Credentials stay outside Docker.
+- Connector activation and acceptance are tracked in the
+  [Hermes publisher runbook](https://github.com/travismetcalf/hermes/blob/main/docs/hermes-publisher.md).
+  Until the connector is active, publish PRs from the laptop.
+- Never use `gh auth login` or service-account tokens in the sandbox.
 
 ## Source of truth
 
