@@ -1,6 +1,6 @@
 # Themes
 
-Reusable color palettes and application themes, with adapters for Hermes.
+Reusable color palettes and application themes, with adapters for Hermes and Codex desktop.
 
 ## Included palettes
 
@@ -49,6 +49,18 @@ Return to the default skin:
 ```bash
 hermes config set display.skin default
 ```
+
+## Codex
+
+Codex desktop themes are in [`apps/codex`](apps/codex). See the [Codex theme guide](apps/codex/README.md) for variants and contrast measurements.
+
+Before switching themes, export your current theme from Codex’s **Settings → Appearance** panel and save the string. That string can be pasted back later to restore the theme.
+
+Import a theme:
+
+1. Open **Codex → Settings → Appearance**.
+2. Choose the matching light or dark variant.
+3. Paste the one-line string from `apps/codex/dusk.codex-theme`, `apps/codex/cream.codex-theme`, or `apps/codex/linear.codex-theme` into the theme import field.
 
 ## Repository structure
 
