@@ -31,3 +31,12 @@ jobs:
             -e GIT_CONFIG_VALUE_0=/repo \
             zricethezav/gitleaks:v8.18.4 \
             detect --source /repo --no-banner --redact
+
+  codex-themes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate Codex themes
+        run: ./scripts/build-codex-themes.rb
+      - name: Verify generated files
+        run: git diff --exit-code -- apps/codex
