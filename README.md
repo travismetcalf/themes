@@ -1,14 +1,6 @@
 # Themes
 
-A shared collection of application themes derived from the design language at `travismetcalf.com/styleguide`.
-
-## Structure
-
-```text
-palettes/          Canonical, application-neutral color tokens
-apps/<app>/        Application-specific theme adapters
-scripts/           Installation helpers
-```
+Reusable color palettes and application themes, with adapters for Hermes.
 
 ## Included palettes
 
@@ -18,23 +10,31 @@ scripts/           Installation helpers
 
 ## Hermes
 
-Hermes skins are in [`apps/hermes`](apps/hermes).
+Hermes skins are in [`apps/hermes`](apps/hermes). These adapters require a Hermes installation that supports custom YAML skins and the `display.skin` setting.
 
-Install all three skins:
+### Install
+
+Clone the repository and install all three skins:
 
 ```bash
+git clone https://github.com/travismetcalf/themes.git
+cd themes
 ./scripts/install-hermes.sh
 ```
 
-Install into a specific Hermes profile or home:
+The installer copies the skins into `${HERMES_HOME:-$HOME/.hermes}/skins`. It does not activate a skin or install Hermes itself.
+
+**The installer overwrites matching skin files.** Compare and back up any local customizations before running it.
+
+To install into a specific Hermes profile or home, run this from the repository directory:
 
 ```bash
 HERMES_HOME="$HOME/.hermes/profiles/example" ./scripts/install-hermes.sh
 ```
 
-The installer overwrites matching runtime skins. Compare and back up any local customizations before running it.
+### Activate
 
-Activate a skin:
+Run one of these commands in the Hermes profile where you installed the skins:
 
 ```bash
 hermes config set display.skin dusk
@@ -50,33 +50,16 @@ Return to the default skin:
 hermes config set display.skin default
 ```
 
-## Deployment and Layout
+## Repository structure
 
-**Source Layout**
+```text
+palettes/          Canonical, application-neutral color tokens
+apps/<app>/        Application-specific theme adapters
+scripts/           Installation helpers
+```
 
-- Laptop: `~/projects/themes`
-- travis-mac: `~/projects/themes` on the host, `/projects/themes` in Docker.
-- Local preservation: `.local-drafts/2026-10-03` is ignored local state (mac only), not tracked source.
+The files under `palettes/` are the source of truth for reusable design tokens. Files under `apps/` map those tokens to each application's theme schema.
 
-**Runtime State**
+## License
 
-- Default: `~/.hermes/skins`
-- Custom: `HERMES_HOME` profile paths.
-- Note: `~/deploy/themes` is not needed until automated runtime deployment is designed.
-
-**Publishing**
-
-- The host-side `themes_fetch_main` / `themes_publish_branch` tools use
-  `hermes/*` branch names. They scan and publish a branch and open a PR; they do
-  not merge it or install skins.
-- The trusted host uses a GitHub App shared with the Hermes publisher. Each
-  Themes publication requests an installation token narrowed to this
-  repository. Credentials stay outside Docker.
-- Connector activation and acceptance are tracked in the
-  [Hermes publisher runbook](https://github.com/travismetcalf/hermes/blob/main/docs/hermes-publisher.md).
-  Until the connector is active, publish PRs from the laptop.
-- Never use `gh auth login` or service-account tokens in the sandbox.
-
-## Source of truth
-
-The files under `palettes/` describe the reusable design tokens. Files under `apps/` map those tokens to each application's theme schema.
+[MIT](LICENSE).
